@@ -4,12 +4,14 @@ import { FcFilmReel } from 'react-icons/fc';
 
 export function Navbar() {
   return (
-    <nav>
-      <Link to="/">
-        <FcFilmReel />
-        Logo
-      </Link>
-      <NavbarMenu />
-    </nav>
+    <header>
+      <nav>
+        <Link to="/">
+          <FcFilmReel />
+          Logo
+        </Link>
+        <NavbarMenu />
+      </nav>
+    </header>
   );
 }

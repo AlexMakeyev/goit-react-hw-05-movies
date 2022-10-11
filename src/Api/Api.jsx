@@ -6,11 +6,10 @@ const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   params: {
     api_key: API_KEY,
-    _limit: 12,
   },
 });
 
-export const getTrendingMovies = async (_page = 1) => {
+export const getTrendingMovies = async () => {
   const { data } = await instance.get('trending/movie/week');
   return data;
 };

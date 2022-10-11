@@ -13,6 +13,7 @@ export function MoviesList({ movies }) {
           }
           alt={title}
         />
+        <p>{title}</p>
       </Link>
     </li>
   ));
