@@ -34,9 +34,9 @@ export function MovieDetails() {
     fetchMovie();
   }, [movieId]);
 
-  if (!movie) {
-    return null;
-  }
+  // if (!movie) {
+  //   return null;
+  // }
 
   return (
     <div>
@@ -46,7 +46,7 @@ export function MovieDetails() {
         <FcLeft />
         Back
       </button>
-      {movie && <MovieItem movie={movie} />}
+      <MovieItem movie={movie} />
     </div>
   );
 }

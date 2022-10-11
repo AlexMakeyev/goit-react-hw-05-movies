@@ -8,7 +8,6 @@ export function Navbar() {
       <nav>
         <Link to="/">
           <FcFilmReel />
-          Logo
         </Link>
         <NavbarMenu />
       </nav>
