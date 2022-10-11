@@ -1,3 +1,10 @@
-export const Movies = () => {
-  return <div>Movies</div>;
-};
+import { SearchMovies } from 'components/SearchMovies/SearchMovies';
+
+export function Movies() {
+  return (
+    <div>
+      Movies
+      <SearchMovies />
+    </div>
+  );
+}

@@ -5,7 +5,7 @@ import initialState from './intialState';
 import fields from './fields';
 import { FcSearch } from 'react-icons/fc';
 
-export const SearchMoviesForm = ({ onSubmit }) => {
+export function SearchMoviesForm({ onSubmit }) {
   const [state, setState] = useState({ ...initialState });
 
   const handleChange = event => {
@@ -39,4 +39,4 @@ export const SearchMoviesForm = ({ onSubmit }) => {
       </button>
     </form>
   );
-};
+}

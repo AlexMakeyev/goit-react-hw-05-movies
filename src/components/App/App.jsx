@@ -7,20 +7,20 @@ import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
 import { Cast } from 'components/Cast/Cast';
 import { Reviews } from 'components/Reviews/Reviews';
 
-export const App = () => {
+export function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
-            <Route path="reviewers" element={<Reviews />} />
-            <Route path="cast" element={<Cast />} />
-          </Route>
+          {/* <Route path="/movies/:movieId" element={<MovieDetails />}> */}
+          {/* <Route path="reviewers" element={<Reviews />} />
+        <Route path="cast" element={<Cast />} /> */}
+          {/* </Route> */}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </>
   );
-};
+}

@@ -13,23 +13,23 @@ export const getTrendingMovies = async () => {
   const { data } = await instance.get('trending/movie/week');
   return data;
 };
-export const getSearchMovie = async query => {
+export const getSearchMovies = async query => {
   const { data } = await instance.get('/search/movie', {
     params: query,
   });
   return data;
 };
-export const getMoviebyId = async id => {
+export const getMoviesbyId = async id => {
   const { data } = instance.get(`/movie/${id}`);
   return data;
 };
 
-export const getMovieCredits = async id => {
+export const getMoviesCredits = async id => {
   const { data } = await instance.get(`/movie/${id}/credits`);
   return data.cast;
 };
 
-export const getMovieReviews = async id => {
+export const getMoviesReviews = async id => {
   const { data } = await instance.get(`/movie/${id}/reviews`);
   return data.results;
 };

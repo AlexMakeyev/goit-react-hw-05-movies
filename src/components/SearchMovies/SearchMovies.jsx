@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
+import { SearchMoviesForm } from './SearchMoviesForm/SearchMoviesForm';
 
-export const SearchMovies = () => {
-  return <div>SearchMovies</div>;
-};
+export function SearchMovies() {
+  return (
+    <div>
+      <SearchMoviesForm />
+    </div>
+  );
+}

@@ -1,10 +1,12 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar } from 'components/Navbar/Navbar';
 
-export const SharedLayout = () => {
+export function SharedLayout() {
   return (
-    <div>
+    <header>
       <Navbar />
-    </div>
+      <Outlet />
+      <footer>Copyright 2022 &copy;</footer>
+    </header>
   );
-};
+}
