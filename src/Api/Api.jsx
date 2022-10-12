@@ -22,7 +22,7 @@ export const searchMovies = async query => {
   return data;
 };
 export const getMoviesbyId = async id => {
-  const { data } = instance.get(`/movie/${id}`);
+  const { data } = await instance.get(`/movie/${id}`);
   return data;
 };
 

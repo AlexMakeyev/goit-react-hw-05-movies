@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
 import { NavbarMenu } from './NavbarMenu/NavbarMenu';
 import { FcFilmReel } from 'react-icons/fc';
+import { Header, NavBar } from './Navbar.styled';
 
 export function Navbar() {
   return (
-    <header>
-      <nav>
+    <Header>
+      <NavBar>
         <Link to="/">
-          <FcFilmReel />
+          <FcFilmReel size="80" />
         </Link>
         <NavbarMenu />
-      </nav>
-    </header>
+      </NavBar>
+    </Header>
   );
 }

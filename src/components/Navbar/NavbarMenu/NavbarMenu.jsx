@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { items } from './items';
-
+import { Nav } from './NavbarMenu.styled';
 export function NavbarMenu() {
   const elements = items.map(({ id, to, text }) => {
     return (
@@ -11,5 +11,5 @@ export function NavbarMenu() {
       </li>
     );
   });
-  return <ul>{elements}</ul>;
+  return <Nav>{elements}</Nav>;
 }

@@ -5,11 +5,14 @@ import { Alert } from 'components/Alert/Alert';
 import { Loader } from 'components/Loader/Loader';
 import { MovieItem } from 'components/MovieItem/MovieItem';
 import { FcLeft } from 'react-icons/fc';
+import { Modal } from 'components/Modal/Modal';
 
 export function MovieDetails() {
   const [movie, setMovie] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showModal, setshowModal] = useState(false);
+  const [backdrop, setBackdrop] = useState('');
   const { movieId } = useParams();
   const location = useLocation();
   const from = location.state?.from ?? '/';
@@ -34,9 +37,17 @@ export function MovieDetails() {
     fetchMovie();
   }, [movieId]);
 
-  // if (!movie) {
-  //   return null;
-  // }
+  const toggleModal = () => {
+    setshowModal(!showModal);
+  };
+  const handleImg = modal => {
+    setBackdrop(modal);
+    setshowModal(!showModal);
+  };
+
+  if (!movie) {
+    return null;
+  }
 
   return (
     <div>
@@ -46,7 +57,8 @@ export function MovieDetails() {
         <FcLeft />
         Back
       </button>
-      <MovieItem movie={movie} />
+      {movie && <MovieItem movie={movie} onClick={handleImg} />}
+      {showModal && <Modal onClose={toggleModal} backdrop={backdrop} />}
     </div>
   );
 }

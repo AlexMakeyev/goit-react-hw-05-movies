@@ -6,6 +6,7 @@ import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
 import { Cast } from 'components/Cast/Cast';
 import { Reviews } from 'components/Reviews/Reviews';
+import { Error404Page } from 'pages/Error404Page/Error404Page';
 
 export function App() {
   return (
@@ -18,7 +19,7 @@ export function App() {
             <Route path="reviews" element={<Reviews />} />
             <Route path="cast" element={<Cast />} />
           </Route>
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Error404Page />} />
         </Route>
       </Routes>
     </>

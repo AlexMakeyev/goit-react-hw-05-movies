@@ -1,8 +1,8 @@
-import { Outlet, useLocation, NavLink } from 'react-router-dom';
+// import { Outlet, useLocation, NavLink } from 'react-router-dom';
 
-export function MovieItem({ movie }) {
-  const location = useLocation();
-  const from = location.state?.from ?? '/movies';
+export function MovieItem({ movie, onClick }) {
+  // const location = useLocation();
+  // const from = location.state?.from ?? '/movies';
 
   const {
     poster_path,
@@ -14,10 +14,10 @@ export function MovieItem({ movie }) {
     backdrop_path,
   } = movie;
 
-  const backdrop = `https://www.themoviedb.org/t/p/w1280_and_h800_multi_faces/${backdrop_path}`;
+  const backdrop = `https://image.tmdb.org/t/p/w500/${backdrop_path}`;
   return (
     <>
-      <div backdrop_path={backdrop}>
+      <div backdrop_path={backdrop} onClick={() => onClick(backdrop)}>
         <div>
           <img
             src={
@@ -44,18 +44,7 @@ export function MovieItem({ movie }) {
           </div>
         </div>
       </div>
-      <div>
-        <h2>Additional information</h2>
-        <div>
-          <NavLink state={{ from }} to="cast">
-            Cast
-          </NavLink>
-          <NavLink state={{ from }} to="reiwers">
-            Reiwers
-          </NavLink>
-        </div>
-        <Outlet />
-      </div>
+      <div>{/* <Outlet /> */}</div>
     </>
   );
 }
