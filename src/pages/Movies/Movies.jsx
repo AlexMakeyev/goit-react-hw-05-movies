@@ -37,11 +37,11 @@ export function Movies() {
     fetchMovies();
   }, [query]);
   return (
-    <div>
+    <main>
       {loading && <Loader />}
       {error && <Alert />}
       <Searchbar value={query} onChange={updateQuery} />
       <MoviesList movies={movies} />
-    </div>
+    </main>
   );
 }

@@ -1,8 +1,10 @@
+import { CastMenu, CastItem, CastTitle } from './CastList.styled';
+
 export function CastList({ movieCast }) {
   const data = movieCast.map(item => {
     const { id, profile_path, original_name, character } = item;
     return (
-      <li key={id}>
+      <CastItem key={id}>
         <img
           src={
             profile_path
@@ -11,10 +13,10 @@ export function CastList({ movieCast }) {
           }
           alt={original_name}
         />
-        <p>{original_name ? original_name : 'no decription'}</p>
-        <p>{character ? character : 'no decription'}</p>
-      </li>
+        <CastTitle>{original_name ? original_name : 'no decription'}</CastTitle>
+        <CastTitle>{character ? character : 'no decription'}</CastTitle>
+      </CastItem>
     );
   });
-  return <ul>{data}</ul>;
+  return <CastMenu>{data}</CastMenu>;
 }

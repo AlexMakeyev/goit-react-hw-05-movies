@@ -1,8 +1,16 @@
 import { useEffect } from 'react';
-import { NavLink, useLocation, Outlet, useNavigate } from 'react-router-dom';
+import { useLocation, Outlet, useNavigate } from 'react-router-dom';
 import { FcLeft } from 'react-icons/fc';
 import { createPortal } from 'react-dom';
-import { Overlay, ModalWindow } from './Modal.styled';
+import {
+  Overlay,
+  ModalWindow,
+  Button,
+  ModalContainer,
+  ModalTitle,
+  ModalLink,
+  ModalList,
+} from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
@@ -35,20 +43,22 @@ export function Modal({ backdrop, onClose }) {
   const instance = (
     <Overlay onClick={handleBackdropClick}>
       <ModalWindow>
-        <button onClick={goBack}>
-          <FcLeft />
-          Back
-        </button>
-        <img src={backdrop} alt="" />
-        <h2>Additional information</h2>
-        <div>
-          <NavLink state={{ from }} to="cast">
-            Cast
-          </NavLink>
-          <NavLink state={{ from }} to="reviews">
-            Reviews
-          </NavLink>
-        </div>
+        <ModalContainer>
+          <img src={backdrop} alt="" />
+          <ModalTitle>Additional information</ModalTitle>
+          <ModalList>
+            <ModalLink state={{ from }} to="cast">
+              Cast
+            </ModalLink>
+            <ModalLink state={{ from }} to="reviews">
+              Reviews
+            </ModalLink>
+            <Button onClick={goBack}>
+              <FcLeft />
+              Home
+            </Button>
+          </ModalList>
+        </ModalContainer>
         <Outlet />
       </ModalWindow>
     </Overlay>

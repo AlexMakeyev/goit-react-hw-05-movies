@@ -1,4 +1,10 @@
 // import { Outlet, useLocation, NavLink } from 'react-router-dom';
+import {
+  MovieContainer,
+  InfoContainer,
+  MovieTitle,
+  MovieInfo,
+} from './MovieItem.styled';
 
 export function MovieItem({ movie, onClick }) {
   // const location = useLocation();
@@ -18,7 +24,7 @@ export function MovieItem({ movie, onClick }) {
   return (
     <>
       <div backdrop_path={backdrop} onClick={() => onClick(backdrop)}>
-        <div>
+        <MovieContainer>
           <img
             src={
               poster_path
@@ -27,22 +33,25 @@ export function MovieItem({ movie, onClick }) {
             }
             alt={title}
           />
-          <div>
-            <h2>{title}</h2>
-            <p>{release_date}</p>
-            <p>
-              {vote_average ? Math.round((vote_average * 100) / 10) : '...'}%
-            </p>
-            <h2>Overview</h2>
-            <p>{overview ? overview : 'no overview found'}</p>
-            <h2>Genres</h2>
-            <p>
+          <InfoContainer>
+            <MovieTitle>{title}</MovieTitle>
+            <MovieInfo>{release_date}</MovieInfo>
+            <MovieInfo>
+              {vote_average
+                ? Math.round((vote_average * 100) / 10)
+                : 'no rating found'}
+              %
+            </MovieInfo>
+            <MovieTitle>Overview</MovieTitle>
+            <MovieInfo>{overview ? overview : 'no overview found'}</MovieInfo>
+            <MovieTitle>Genres</MovieTitle>
+            <MovieInfo>
               {genres
                 ? genres.map(genre => genre.name).join(', ')
                 : 'no genres found'}
-            </p>
-          </div>
-        </div>
+            </MovieInfo>
+          </InfoContainer>
+        </MovieContainer>
       </div>
       <div>{/* <Outlet /> */}</div>
     </>

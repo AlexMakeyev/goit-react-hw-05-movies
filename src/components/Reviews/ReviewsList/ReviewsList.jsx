@@ -1,11 +1,12 @@
+import { RevMenu, RevItem, RevTitle } from './ReviewsList.styled';
 export function ReviewsList({ movieReviews }) {
   const data = movieReviews.map(({ id, author, content }) => {
     return (
-      <li key={id}>
-        <h3>{author ? author : 'no author found'}</h3>
+      <RevItem key={id}>
+        <RevTitle>{author ? author : 'no author found'}</RevTitle>
         <p>{content ? content : 'no content found'}</p>
-      </li>
+      </RevItem>
     );
   });
-  return <ul>{data}</ul>;
+  return <RevMenu>{data}</RevMenu>;
 }

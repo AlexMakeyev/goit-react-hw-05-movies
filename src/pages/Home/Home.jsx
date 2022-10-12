@@ -3,6 +3,8 @@ import { getTrendingMovies } from '../../Api/Api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { Alert } from 'components/Alert/Alert';
+import { GoFlame } from 'react-icons/go';
+import { MainContainer, Title } from './Home.styled';
 
 export function Home() {
   const [movies, setMovies] = useState([]);
@@ -30,11 +32,15 @@ export function Home() {
   }
 
   return (
-    <main>
+    <MainContainer>
       {loading && <Loader />}
       {error && <Alert />}
-      <h1>Hot week trends</h1>
+      <Title>
+        Hot week trends
+        <GoFlame />
+      </Title>
+
       <MoviesList movies={movies} />
-    </main>
+    </MainContainer>
   );
 }

@@ -6,6 +6,7 @@ import { Loader } from 'components/Loader/Loader';
 import { MovieItem } from 'components/MovieItem/MovieItem';
 import { FcLeft } from 'react-icons/fc';
 import { Modal } from 'components/Modal/Modal';
+import { Button } from './MovieDetails.styled';
 
 export function MovieDetails() {
   const [movie, setMovie] = useState(0);
@@ -53,10 +54,10 @@ export function MovieDetails() {
     <div>
       {loading && <Loader />}
       {error && <Alert />}
-      <button onClick={goBack}>
+      <Button onClick={goBack}>
         <FcLeft />
         Back
-      </button>
+      </Button>
       {movie && <MovieItem movie={movie} onClick={handleImg} />}
       {showModal && <Modal onClose={toggleModal} backdrop={backdrop} />}
     </div>
