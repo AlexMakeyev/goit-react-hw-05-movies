@@ -19,8 +19,8 @@ export function App() {
             <Route path="reviews" element={<Reviews />} />
             <Route path="cast" element={<Cast />} />
           </Route>
-          <Route path="*" element={<Error404Page />} />
         </Route>
+        <Route path="*" element={<Error404Page />} />
       </Routes>
     </>
   );

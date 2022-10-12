@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesCredits } from 'Api/Api';
 import { CastList } from './CastList/CastList';
+import { CastInfo } from './Cast.styled';
 
 export function Cast() {
   const [movieCast, setMovieCast] = useState(0);
@@ -15,7 +16,11 @@ export function Cast() {
     return;
   }
   if (movieCast.length === 0) {
-    return <p>Sorry, there is no cast for current movie.</p>;
+    return (
+      <CastInfo>
+        <p>Sorry, there is no cast for current movie.</p>
+      </CastInfo>
+    );
   }
 
   return <CastList movieCast={movieCast} />;

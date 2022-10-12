@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { searchMovies } from 'Api/Api';
 import { Loader } from 'components/Loader/Loader';
 import { Alert } from 'components/Alert/Alert';
+import { MainContainer } from './Movies.styled';
 
 export function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -37,11 +38,11 @@ export function Movies() {
     fetchMovies();
   }, [query]);
   return (
-    <main>
+    <MainContainer>
       {loading && <Loader />}
       {error && <Alert />}
       <Searchbar value={query} onChange={updateQuery} />
       <MoviesList movies={movies} />
-    </main>
+    </MainContainer>
   );
 }
