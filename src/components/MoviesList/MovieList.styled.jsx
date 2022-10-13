@@ -8,7 +8,6 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   margin: 10px;
-  flex-basis: auto;
 `;
 export const ItemLink = styled(Link)`
   text-decoration: none;
@@ -18,4 +17,8 @@ export const ItemTitle = styled.p`
   font-size: 12px;
   font-weight: bold;
   color: black;
+`;
+export const Poster = styled.img`
+  width: 300px;
+  height: 450px;
 `;

@@ -5,6 +5,7 @@ import {
   MovieTitle,
   MovieInfo,
 } from './MovieItem.styled';
+import image_placeholder from '../../images/image_placeholder.png';
 
 export function MovieItem({ movie, onClick }) {
   // const location = useLocation();
@@ -29,7 +30,7 @@ export function MovieItem({ movie, onClick }) {
             src={
               poster_path
                 ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-                : 'no poster found'
+                : image_placeholder
             }
             alt={title}
           />

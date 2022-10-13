@@ -4,6 +4,7 @@ export const Header = styled.header`
   padding: 15px;
   background-color: #daf5ee;
   border-bottom: 5px solid #4fa94d;
+  width: 1600px;
 `;
 
 export const NavBar = styled.nav`

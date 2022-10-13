@@ -6,7 +6,8 @@ export const Footer = styled.footer`
   padding: 15px;
   color: #4fa94d;
   text-align: center;
+  width: 1600px;
 `;
 export const Container = styled.div`
-  width: 100%;
+  width: 1600px;
 `;
