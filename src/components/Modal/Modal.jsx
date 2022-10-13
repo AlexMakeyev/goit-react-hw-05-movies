@@ -64,7 +64,7 @@ export function Modal({ backdrop, onClose }) {
       </ModalWindow>
     </Overlay>
   );
-  console.log(instance);
+  // console.log(instance);
 
   return createPortal(instance, modalRoot);
 }
