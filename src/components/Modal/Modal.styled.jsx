@@ -68,3 +68,6 @@ export const ModalLink = styled(NavLink)`
     color: #fff;
   }
 `;
+export const ModalImg = styled.img`
+  width: 100%;
+`;

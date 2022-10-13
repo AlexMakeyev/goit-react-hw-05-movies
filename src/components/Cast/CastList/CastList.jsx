@@ -1,4 +1,5 @@
 import { CastMenu, CastItem, CastTitle } from './CastList.styled';
+import image_placeholder from '../../../images/image_placeholder.png';
 
 export function CastList({ movieCast }) {
   const data = movieCast.map(item => {
@@ -9,7 +10,7 @@ export function CastList({ movieCast }) {
           src={
             profile_path
               ? `https://image.tmdb.org/t/p/w300${profile_path}`
-              : 'no photo found'
+              : image_placeholder
           }
           alt={original_name}
         />

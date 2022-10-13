@@ -10,6 +10,7 @@ import {
   ModalTitle,
   ModalLink,
   ModalList,
+  ModalImg,
 } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal-root');
@@ -44,7 +45,7 @@ export function Modal({ backdrop, onClose }) {
     <Overlay onClick={handleBackdropClick}>
       <ModalWindow>
         <ModalContainer>
-          <img src={backdrop} alt="" />
+          <ModalImg src={backdrop} alt="" />
           <ModalTitle>Additional information</ModalTitle>
           <ModalList>
             <ModalLink state={{ from }} to="cast">

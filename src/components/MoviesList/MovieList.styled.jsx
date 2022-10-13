@@ -14,7 +14,7 @@ export const ItemLink = styled(Link)`
   text-align: center;
 `;
 export const ItemTitle = styled.p`
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   color: black;
 `;
