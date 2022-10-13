@@ -4,7 +4,7 @@ import { getMoviesReviews } from 'Api/Api';
 import { ReviewsList } from './ReviewsList/ReviewsList';
 import { RevtInfo } from './Reviews.styled';
 
-export function Reviews() {
+export default function Reviews() {
   const [movieReviews, setMovieReviews] = useState([]);
   const { movieId } = useParams();
 

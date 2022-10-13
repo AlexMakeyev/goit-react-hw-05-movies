@@ -1,4 +1,5 @@
 import { FcSearch } from 'react-icons/fc';
+
 import fields from './fields';
 import { SearchContainer, Input } from './Searchbar.styled';
 export function Searchbar({ value, onChange }) {

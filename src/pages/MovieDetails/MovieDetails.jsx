@@ -8,7 +8,7 @@ import { FcLeft } from 'react-icons/fc';
 import { Modal } from 'components/Modal/Modal';
 import { Button } from './MovieDetails.styled';
 
-export function MovieDetails() {
+export default function MovieDetails() {
   const [movie, setMovie] = useState(0);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);

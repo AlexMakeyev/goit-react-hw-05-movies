@@ -6,7 +6,7 @@ import { Alert } from 'components/Alert/Alert';
 import { GoFlame } from 'react-icons/go';
 import { MainContainer, Title } from './Home.styled';
 
-export function Home() {
+export default function Home() {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);

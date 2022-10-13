@@ -5,7 +5,7 @@ import {
   ErrorItem,
   ErrorContainer,
 } from './Error404Page.styled';
-export function Error404Page() {
+export default function Error404Page() {
   return (
     <div>
       <ErrorContainer>

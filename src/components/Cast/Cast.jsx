@@ -4,7 +4,7 @@ import { getMoviesCredits } from 'Api/Api';
 import { CastList } from './CastList/CastList';
 import { CastInfo } from './Cast.styled';
 
-export function Cast() {
+export default function Cast() {
   const [movieCast, setMovieCast] = useState(0);
   const { movieId } = useParams();
 

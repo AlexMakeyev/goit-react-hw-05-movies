@@ -7,7 +7,7 @@ import { Loader } from 'components/Loader/Loader';
 import { Alert } from 'components/Alert/Alert';
 import { MainContainer } from './Movies.styled';
 
-export function Movies() {
+export default function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
